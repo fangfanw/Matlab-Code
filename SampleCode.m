@@ -4,22 +4,13 @@ load SimulatedData.mat;
 [J, nSamples] = size(Yt);
 t = 1:nSamples;  
 covariates = [ones(1,nSamples); cos(2*pi*t./5); sin(2*pi*t./5)];  
-D0 = [1 0.3 -0.05; 
-      2 0.1 -0.03; 
-      3 0.5 -0.07; 
-      4 0.4 -0.01;
-      5 0.6 -0.1];
-[J,I] = size(D0);   
-A = ones(5,1); 
-d3 = [1/(.16^2); 1/(.37^2); 1/(.294^2); 1/(.219^2); 1/(.226^2)]; 
-
+I = size(covariates,1);   
 
 DEst  = PoisPara_fminunc(Yt, covariates);  
 EstTrend = exp(DEst*covariates);  
 etahat = Yt./EstTrend;              
 etabar = mean(etahat,2);
     
-
 Omega1jhat = cell(1,J); Omegayjhat = cell(1,J);
 SqResid = (Yt - EstTrend).^2; 
 for j = 1:J
