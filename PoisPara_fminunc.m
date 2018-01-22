@@ -1,4 +1,12 @@
 function ParametersEst = PoisPara_fminunc(Yt, covariates, options)
+% Inputs:
+%   Yt : integer-valued multivariate time series, J by nSamples
+%   covariates: I-by-nSamples matrix
+%   options: options for minimization
+%
+% Output: 
+%   ParametersEst: estimated D for covariates X
+
 if (nargin <= 2) || isempty(options)
     options  =  optimset('fminunc');
     options  =  optimset(options , 'TolFun'      , 1e-004);
