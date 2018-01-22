@@ -7,4 +7,4 @@ Matlab code for the paper "Modeling Non-stationary Multivariate Time Series of C
 
 - `ObjLn.m` - Compute negative Poisson-log-likelihood function.
 
-- The data analyzed in Section 5 of the paper are available at !http://selfsynchronize.com/hayne/sna/.
+- The data analyzed in Section 5 of the paper are available at http://selfsynchronize.com/hayne/sna/.
