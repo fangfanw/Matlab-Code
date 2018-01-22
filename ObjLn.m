@@ -5,7 +5,7 @@ function [Lnj, Gradj, Hessj] = ObjLn(Dj, Ytj, covariates)
 %   Ytj: observations for jth subject, nSamples-by-1
 %   covariates: I-by-nSamples matrix
 %
-% Output: 
+% Outputs: 
 %   Lnj: misspecified Negative Poisson-log-likelihood function for jth subject
 %   Gradj: gradient
 %   Hessj: Hessian matrix
