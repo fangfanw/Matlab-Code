@@ -6,3 +6,5 @@ Matlab code for the paper "Modeling Non-stationary Multivariate Time Series of C
 - `PoisPara_fminunc.m` - Parameter estimation using the pseudo maximum likelihood approach.
 
 - `ObjLn.m` - Compute negative Poisson-log-likelihood function.
+
+- The data analyzed in Section 5 of the paper are available at !http://selfsynchronize.com/hayne/sna/.
